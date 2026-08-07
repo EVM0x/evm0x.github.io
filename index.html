@@ -115,12 +115,12 @@ a{color:inherit;text-decoration:none;}
 .work-art svg{position:absolute;inset:0;width:100%;height:100%;display:block;transition:transform .4s,filter .4s;}
 .work-col:hover .work-art svg{transform:scale(1.06);filter:brightness(1.12);}
 .work-art .c{position:absolute;top:0;left:0;width:11px;height:11px;border-top:2px solid var(--cc-accent);border-left:2px solid var(--cc-accent);z-index:3;}
-.work-info{padding:clamp(14px,2vw,22px);display:flex;flex-direction:column;gap:12px;}
+.work-info{padding:clamp(14px,2vw,22px);display:flex;flex-direction:column;gap:12px;flex:1;}
 .work-info .ttl{font-size:15px;font-weight:600;display:flex;justify-content:space-between;align-items:baseline;}
 .work-info .ttl .cf{color:var(--cc-accent);}
 .work-info .ttl .ar{color:var(--tx2);font-size:14px;transition:transform .25s;}
 .work-col:hover .work-info .ttl .ar{color:var(--cc-accent);transform:translateX(4px);}
-.work-info .ds{color:#9a9a9a;font-size:13px;line-height:1.6;}
+.work-info .ds{color:#9a9a9a;font-size:13px;line-height:1.6;flex:1;}
 .work-info .tg{display:flex;gap:6px;flex-wrap:wrap;}
 .work-info .tg span{border:1px solid #222;padding:3px 8px;font-size:12px;color:#aaa;}
 
@@ -143,7 +143,8 @@ a{color:inherit;text-decoration:none;}
 .about-cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2vw,20px);}
 .about-col{border:var(--border);padding:clamp(16px,2vw,24px);display:flex;flex-direction:column;justify-content:center;}
 .about-col .n{color:var(--cc-accent);font-size:12px;letter-spacing:.15em;margin-bottom:12px;}
-.about-col h3{font-size:16px;margin-bottom:8px;}
+.about-col h3{font-size:16px;margin-bottom:8px;font-variant-ligatures:none;letter-spacing:.01em;}
+.about-col h3 a{display:inline-block;font-variant-ligatures:none;letter-spacing:.01em;}
 .about-col p{color:#9a9a9a;font-size:13px;line-height:1.7;}
 
 /* STAT ROW */
@@ -156,9 +157,10 @@ a{color:inherit;text-decoration:none;}
 /* CTA */
 .cta{border-top:var(--border);border-bottom:var(--border);}
 .cta-inner{max-width:1700px;margin:0 auto;padding:clamp(50px,7vw,90px) var(--side-padding);}
-.cta h2{font-size:clamp(24px,4.5vw,56px);line-height:1.05;font-weight:700;}
+.cta .sec-head{margin-bottom:26px;}
+.cta h2{font-size:clamp(24px,4.5vw,56px);line-height:1.05;font-weight:700;text-align:center;}
 .cta h2 .cf{color:var(--cc-accent);}
-.cta-link{display:inline-block;margin-top:34px;border:2px solid var(--cc-accent);color:var(--cc-accent);padding:16px 30px;font-size:15px;letter-spacing:.03em;transition:.15s;}
+.cta-link{display:block;width:fit-content;margin:34px auto 0;border:2px solid var(--cc-accent);color:var(--cc-accent);padding:16px 30px;font-size:15px;letter-spacing:.03em;transition:.15s;text-align:center;}
 .cta-link:hover{background:var(--cc-accent);color:#000;}
 
 /* FOOTER */
@@ -171,6 +173,13 @@ footer a:hover svg{transform:scale(1.2);}
 @media(max-width:820px){
   .hero-grid{flex-direction:column;}.col,.col-mid{flex:1;}.work-col{width:300px;}
   .about-grid,.about-cols,.stats-row{grid-template-columns:1fr;}
+  .cta-inner{padding:clamp(30px,5vw,50px) var(--side-padding);}
+}
+@media(max-width:480px){
+  .header-inner{flex-wrap:wrap;gap:10px;}.nav-left{order:3;width:100%;justify-content:center;padding-top:8px;border-top:var(--border);}
+  .work-col{width:260px;}.hero{padding-top:110px;}
+  .sec-head h2{font-size:clamp(18px,5vw,24px);}
+  .cta h2{font-size:clamp(20px,6vw,32px);}
 }
 </style>
 </head>
@@ -210,7 +219,7 @@ footer a:hover svg{transform:scale(1.2);}
 <div class="about-col"><div class="n">01 / FOCUS</div><h3>EVM & Web3</h3><p>Exploring Ethereum and EVM-compatible networks, smart contracts and decentralized workflows.</p></div>
 <div class="about-col"><div class="n">02 / PROCESS</div><h3>Public building</h3><p>Open repositories that document the journey — experiment, test, document, iterate.</p></div>
 <div class="about-col"><div class="n">03 / MINDSET</div><h3>Builder</h3><p>Fast iteration across smart contracts, automation and developer tooling.</p></div>
-<div class="about-col"><div class="n">04 / CONTACT</div><h3><a href="https://x.com/3vm0x" target="_blank" style="color:var(--cc-accent);">@3vm0x</a></h3><p>DM open for collabs, audits or just to connect on X.</p></div>
+<div class="about-col"><div class="n">04 / CONTACT</div><h3><a href="https://x.com/3vm0x" target="_blank" style="color:var(--cc-accent);font-variant-ligatures:none;letter-spacing:.01em;">@3vm0x</a></h3><p>DM open for collabs, audits or just to connect on X. Email: <a href="mailto:hello@evm0x.com" style="color:var(--cc-accent);font-variant-ligatures:none;">hello@evm0x.com</a></p></div>
 </div>
 </div>
 
@@ -222,7 +231,7 @@ footer a:hover svg{transform:scale(1.2);}
 </div>
 </section>
 
-<section class="cta"><div class="cta-inner"><h2>Explore the <span class="cf">work</span> on GitHub.</h2><a class="cta-link" href="https://github.com/EVM0x" target="_blank">VISIT GITHUB PROFILE →</a></div></section>
+<section class="sec cta"><div class="sec-head"><span class="idx">// 04</span><h2>Connect</h2><span class="meta">github & social</span></div><div class="cta-inner"><h2>Explore the <span class="cf">work</span> on GitHub.</h2><a class="cta-link" href="https://github.com/EVM0x" target="_blank">VISIT GITHUB PROFILE →</a></div></section>
 
 <footer>
 <div class="f-left"><span>© 2026 EVM0x</span><a href="https://github.com/EVM0x" target="_blank">GitHub</a><a href="https://x.com/3vm0x" target="_blank" aria-label="X/Twitter"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></div>
