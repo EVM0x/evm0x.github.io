@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>EVM0x — Web3 & EVM Builder</title>
-<meta property="og:title" content="EVM0x — Web3 & EVM Builder" />
-<meta property="og:description" content="Open-source builder at the intersection of blockchain & software. Smart contracts, EVM tooling & Web3 automation." />
+<title>EVM0x — Smart Contract Engineer & Web3 Builder</title>
+<meta property="og:title" content="EVM0x — Smart Contract Engineer & Web3 Builder" />
+<meta property="og:description" content="Smart contract engineer & Web3 automation builder. Open for hire — Solidity, EVM tooling, bots & Web3 frontends. Built, tested and documented in public." />
 <meta property="og:image" content="https://evm0x.com/og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -13,8 +13,8 @@
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="EVM0x" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="EVM0x — Web3 & EVM Builder" />
-<meta name="twitter:description" content="Open-source builder at the intersection of blockchain & software." />
+<meta name="twitter:title" content="EVM0x — Smart Contract Engineer & Web3 Builder" />
+<meta name="twitter:description" content="Smart contract engineer & Web3 automation builder. Open for hire — Solidity, EVM tooling, bots & Web3 frontends." />
 <meta name="twitter:image" content="https://evm0x.com/og-image.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -139,8 +139,8 @@ a{color:inherit;text-decoration:none;}
 /* ABOUT -- duotone red photo */
 .about-grid{display:grid;grid-template-columns:1fr 2fr;gap:clamp(14px,2vw,24px);}
 .about-photo-col{display:flex;flex-direction:column;gap:12px;}
-.about-photo-frame{border:var(--border);overflow:hidden;aspect-ratio:1/1;position:relative;background:#000;}
-.about-photo-frame img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;filter:grayscale(0.35) contrast(1.15);transition:filter .5s,transform .5s;}
+.about-photo-frame{border:var(--border);overflow:hidden;aspect-ratio:1/1;position:relative;}
+.about-photo-frame img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(0.35) contrast(1.15);transition:filter .5s,transform .5s;}
 .about-photo-frame:hover img{filter:grayscale(0) contrast(1);transform:scale(1.03);}
 .about-photo-frame .c{position:absolute;top:0;left:0;width:11px;height:11px;border-top:2px solid var(--cc-accent);border-left:2px solid var(--cc-accent);z-index:3;}
 .about-photo-frame .duotone-overlay{position:absolute;inset:0;mix-blend-mode:screen;pointer-events:none;background:linear-gradient(135deg, rgba(235,0,4,0.35), transparent 60%);z-index:2;opacity:0;transition:opacity .5s;}
@@ -170,6 +170,30 @@ a{color:inherit;text-decoration:none;}
 .cta-link{display:block;width:fit-content;margin:34px auto 0;border:2px solid var(--cc-accent);color:var(--cc-accent);padding:16px 30px;font-size:15px;letter-spacing:.03em;transition:.15s;text-align:center;}
 .cta-link:hover{background:var(--cc-accent);color:#000;}
 
+/* HIRE BADGE */
+.hero-role{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.hire-badge{display:inline-flex;align-items:center;gap:8px;border:1px solid #2f6f4f;color:#4ade80;padding:6px 14px;font-size:12px;letter-spacing:.12em;border-radius:2px;}
+.hire-badge .pulse{width:7px;height:7px;border-radius:50%;background:#4ade80;animation:pulse 1.6s infinite;}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(74,222,128,.5);}50%{box-shadow:0 0 0 5px rgba(74,222,128,0);}}
+.role-title{font-size:clamp(15px,1.6vw,20px);color:#ccc;}
+
+/* SERVICES */
+.svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(14px,2vw,20px);}
+.svc{border:var(--border);padding:clamp(18px,2.5vw,28px);transition:border-color .2s,transform .2s;}
+.svc:hover{border-color:var(--cc-accent);transform:translateY(-3px);}
+.svc .ic{font-size:22px;color:var(--cc-accent);margin-bottom:12px;display:block;}
+.svc h3{font-size:16px;margin-bottom:8px;}
+.svc p{color:#9a9a9a;font-size:13px;line-height:1.7;}
+
+/* TIMELINE */
+.timeline{position:relative;padding-left:26px;}
+.timeline::before{content:'';position:absolute;left:6px;top:4px;bottom:4px;width:1px;background:#222;}
+.tl-item{position:relative;padding:0 0 28px 18px;}
+.tl-item::before{content:'';position:absolute;left:-24px;top:5px;width:11px;height:11px;border:2px solid var(--cc-accent);background:#000;transform:rotate(45deg);}
+.tl-item .when{font-size:12px;color:var(--cc-accent);letter-spacing:.1em;margin-bottom:5px;}
+.tl-item h4{font-size:15px;margin-bottom:6px;}
+.tl-item p{color:#9a9a9a;font-size:13px;line-height:1.7;}
+
 /* FOOTER */
 footer{max-width:1700px;margin:0 auto;padding:26px var(--side-padding);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;color:#666;font-size:12px;border-top:var(--border);}
 footer .f-left{display:flex;gap:24px;}
@@ -180,6 +204,7 @@ footer a:hover svg{transform:scale(1.2);}
 @media(max-width:820px){
   .hero-grid{flex-direction:column;}.col,.col-mid{flex:1;}.work-col{width:300px;}
   .about-grid,.about-cols,.stats-row{grid-template-columns:1fr;}
+  .svc-grid{grid-template-columns:1fr;}
   .cta-inner{padding:clamp(30px,5vw,50px) var(--side-padding);}
 }
 @media(max-width:480px){
@@ -192,10 +217,10 @@ footer a:hover svg{transform:scale(1.2);}
 </head>
 <body>
 <div class="thunder"><div class="thunder-bolt"></div><div class="thunder-bolt"></div><div class="thunder-bolt"></div><div class="thunder-bolt"></div><div class="thunder-bolt"></div><div class="thunder-bolt"></div><div class="thunder-bolt"></div><div class="thunder-bolt"></div><div class="thunder-bolt"></div><div class="thunder-flash"></div><div class="thunder-flash2"></div></div>
-<header class="header"><div class="header-inner"><div class="logo-text">EVM0x<span class="dot">.</span></div><nav class="nav-left"><a href="#projects">Projects</a><a href="#stack">Stack</a><a href="#about">About</a></nav><div class="header-right"><a href="https://github.com/EVM0x" target="_blank">GITHUB ↗</a></div></div></header>
+<header class="header"><div class="header-inner"><div class="logo-text">EVM0x<span class="dot">.</span></div><nav class="nav-left"><a href="#projects">Projects</a><a href="#services">Services</a><a href="#about">About</a><a href="#stack">Stack</a></nav><div class="header-right"><a href="https://github.com/EVM0x" target="_blank">GITHUB ↗</a></div></div></header>
 
 <section class="hero">
-<div class="hero-head"><p class="tagline">Building <span class="cf">Web3 tools</span> for the EVM frontier.</p></div>
+<div class="hero-head"><div class="hero-role"><span class="hire-badge"><span class="pulse"></span>AVAILABLE FOR HIRE</span><p class="tagline"><span class="cf">Smart Contract Engineer</span> & Web3 Automation Builder</p></div></div>
 <div class="hero-grid"><span class="tick tl"></span><span class="tick tr"></span><span class="tick bl"></span><span class="tick br"></span>
 <div class="col"><div class="block"><div class="block-title">01 — Who</div><div class="big">Open-source builder at the intersection of <span class="cf">blockchain & software</span>.</div></div><div class="block"><div class="block-title">Focus</div><p class="body">Smart contracts, EVM-compatible networks, Web3 tooling & automation — built, tested and documented in public.</p></div></div>
 <div class="col col-mid"><div class="block"><div class="block-title">02 — What we ship</div><div class="big">EVM experiments, <span class="cf">smart contracts</span> & open tools.</div></div><div><div class="hero-stat"><span class="k">Ecosystem</span><span class="v">Ethereum / EVM</span></div><div class="hero-stat"><span class="k">Mode</span><span class="v">Open Source</span></div><div class="hero-stat"><span class="k">Focus</span><span class="v">Web3 · Automation</span></div></div></div>
@@ -214,7 +239,15 @@ footer a:hover svg{transform:scale(1.2);}
 
 <section class="sec" id="stack"><div class="sec-head"><span class="idx">// 02</span><h2>Stack</h2><span class="meta">tools & tech</span></div><div class="stack"><span class="chip">Solidity</span><span class="chip">Ethereum</span><span class="chip">EVM</span><span class="chip">Hardhat</span><span class="chip">Foundry</span><span class="chip">ethers.js</span><span class="chip">web3.js</span><span class="chip">Node.js</span><span class="chip">TypeScript</span><span class="chip">React</span><span class="chip">Next.js</span><span class="chip">Tailwind CSS</span><span class="chip">Python</span><span class="chip">zk-SNARKs</span><span class="chip">Monad</span><span class="chip">Git</span><span class="chip">Automation</span></div></section>
 
-<section class="sec" id="about"><div class="sec-head"><span class="idx">// 03</span><h2>About</h2><span class="meta">the builder</span></div>
+<section class="sec" id="services"><div class="sec-head"><span class="idx">// 03</span><h2>What I do</h2><span class="meta">services & capabilities</span></div>
+<div class="svc-grid">
+<div class="svc"><span class="ic">▣</span><h3>Smart Contract Development</h3><p>Secure, gas-optimized Solidity contracts on Ethereum & EVM networks — tested with Hardhat & Foundry, deployed in public.</p></div>
+<div class="svc"><span class="ic">⚙</span><h3>Web3 Automation & Bots</h3><p>Automated agents and bots — from onchain farming to poker strategy bots with EV calculations. Built to run, tested to survive.</p></div>
+<div class="svc"><span class="ic">◆</span><h3>dApp & Web3 Frontend</h3><p>React / Next.js interfaces with ethers.js — from zkApp browser UIs to onchain tools that ship and ship fast.</p></div>
+<div class="svc"><span class="ic">⌬</span><h3>Protocol Tooling & Integration</h3><p>Wallet tooling, testnet deployments, smart-contract integrations across EVM-compatible chains.</p></div>
+</div></section>
+
+<section class="sec" id="about"><div class="sec-head"><span class="idx">// 04</span><h2>About</h2><span class="meta">the builder</span></div>
 <div class="about-grid">
 <div class="about-photo-col">
 <div class="about-photo-frame"><span class="c"></span><div class="duotone-overlay"></div><img src="photo.jpg" alt="EVM0x"/></div>
@@ -234,9 +267,17 @@ footer a:hover svg{transform:scale(1.2);}
 <div class="stat-card"><div class="val">4</div><div class="lbl">Chains Deployed</div></div>
 <div class="stat-card"><div class="val">1</div><div class="lbl">Hackathon</div></div>
 </div>
+
+<div class="sec-head" style="margin-top:clamp(40px,5vw,70px);"><span class="idx">// 05</span><h2>Experience</h2><span class="meta">path so far</span></div>
+<div class="timeline">
+<div class="tl-item"><div class="when">HACKATHON</div><h4>Spark Hackathon — <span class="cf">Splitmon</span></h4><p>Built an onchain bill splitter on Monad. Deployed smart contract, documented the build, shipped in public.</p></div>
+<div class="tl-item"><div class="when">PRODUCT</div><h4>Poker <span class="cf">Bot</span> — EV-based strategy agents</h4><p>Automated poker agents with expected-value calculations, strategy modeling and game automation.</p></div>
+<div class="tl-item"><div class="when">TOOLING</div><h4>zkApp <span class="cf">Browser UI</span></h4><p>Browser-based zero-knowledge application interface — compile, verify and deploy circuits from the browser.</p></div>
+<div class="tl-item"><div class="when">AUTOMATION</div><h4>Green <span class="cf">Garden</span> — onchain farming automation</h4><p>Daily automated onchain farming pipeline — cron-driven, optimized across testnets.</p></div>
+</div>
 </section>
 
-<section class="sec cta"><div class="sec-head"><span class="idx">// 04</span><h2>Connect</h2><span class="meta">github & social</span></div><div class="cta-inner"><h2>Explore the <span class="cf">work</span> on GitHub.</h2><a class="cta-link" href="https://github.com/EVM0x" target="_blank">VISIT GITHUB PROFILE →</a></div></section>
+<section class="sec cta"><div class="sec-head"><span class="idx">// 06</span><h2>Connect</h2><span class="meta">let's build together</span></div><div class="cta-inner"><h2>Got a smart contract,<br/>bot or <span class="cf">Web3 idea</span> to build?</h2><p style="text-align:center;color:#9a9a9a;font-size:14px;margin-top:18px;line-height:1.7;">Open for contract work, collaborations and audits. Reach out —<br/>I reply fast and ship in public.</p><a class="cta-link" href="https://x.com/3vm0x" target="_blank">DM @3vm0x ON X →</a><div class="cta-alt" style="text-align:center;margin-top:22px;font-size:13px;color:#888;"><a href="https://github.com/EVM0x" target="_blank" style="margin:0 10px;">GitHub</a>·<a href="https://evm0x0.carrd.co/" target="_blank" style="margin:0 10px;">Blog</a>·<a href="https://x.com/3vm0x" target="_blank" style="margin:0 10px;">X / Twitter</a></div></div></section>
 
 <footer>
 <div class="f-left"><span>© 2026 EVM0x</span><a href="https://github.com/EVM0x" target="_blank">GitHub</a><a href="https://x.com/3vm0x" target="_blank" aria-label="X/Twitter"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></div>
@@ -255,7 +296,7 @@ document.querySelectorAll('.nav-left a').forEach(a=>{
   });
 });
 window.addEventListener('scroll',()=>{
-  const sections=['projects','stack','about'];
+  const sections=['projects','services','about','stack'];
   let cur='';
   sections.forEach(id=>{
     const el=document.getElementById(id);
