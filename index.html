@@ -139,8 +139,8 @@ a{color:inherit;text-decoration:none;}
 /* ABOUT -- duotone red photo */
 .about-grid{display:grid;grid-template-columns:1fr 2fr;gap:clamp(14px,2vw,24px);}
 .about-photo-col{display:flex;flex-direction:column;gap:12px;}
-.about-photo-frame{border:var(--border);overflow:hidden;aspect-ratio:1/1;position:relative;}
-.about-photo-frame img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:grayscale(0.35) contrast(1.15);transition:filter .5s,transform .5s;}
+.about-photo-frame{border:var(--border);overflow:hidden;aspect-ratio:1/1;position:relative;background:#000;}
+.about-photo-frame img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;filter:grayscale(0.35) contrast(1.15);transition:filter .5s,transform .5s;}
 .about-photo-frame:hover img{filter:grayscale(0) contrast(1);transform:scale(1.03);}
 .about-photo-frame .c{position:absolute;top:0;left:0;width:11px;height:11px;border-top:2px solid var(--cc-accent);border-left:2px solid var(--cc-accent);z-index:3;}
 .about-photo-frame .duotone-overlay{position:absolute;inset:0;mix-blend-mode:screen;pointer-events:none;background:linear-gradient(135deg, rgba(235,0,4,0.35), transparent 60%);z-index:2;opacity:0;transition:opacity .5s;}
