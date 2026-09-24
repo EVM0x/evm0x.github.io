@@ -50,6 +50,24 @@ a{color:inherit;text-decoration:none;}
 
 /* HERO -- monogram watermark */
 .hero{padding-top:130px;max-width:1700px;margin:0 auto;position:relative;overflow:hidden;}
+
+/* LANYARD -- 3D badge island (absolute, top-right of hero) */
+#lanyard-mount{position:absolute;top:10px;right:calc(-1 * var(--side-padding));width:min(26vw,360px);height:min(72vh,680px);z-index:3;pointer-events:none;overflow:visible;}
+/* minimal Tailwind-equivalent utilities used by the Lanyard component internals */
+#lanyard-mount .relative{position:relative;}
+#lanyard-mount .w-full{width:100%;}
+#lanyard-mount .h-screen{height:100%;}
+#lanyard-mount .flex{display:flex;}
+#lanyard-mount .justify-center{justify-content:center;}
+#lanyard-mount .items-center{align-items:center;}
+#lanyard-mount .transform{transform:translateZ(0);}
+#lanyard-mount .scale-100{transform:scale(1);}
+#lanyard-mount .origin-center{transform-origin:center;}
+#lanyard-mount canvas{display:block;pointer-events:auto;touch-action:none;}
+/* keep the hanging badge clear of hero copy on wide screens; hide on narrow */
+@media(min-width:1180px){.hero-head{padding-right:min(30vw,400px);}}
+@media(max-width:1179px){#lanyard-mount{display:none;}}
+@media(max-height:700px){#lanyard-mount{height:min(60vh,520px);top:-80px;}}
 .hero::before{
   content:'EVM0x';position:absolute;z-index:0;pointer-events:none;user-select:none;
   right:clamp(10px,3vw,40px);top:60px;
@@ -220,6 +238,12 @@ footer a:hover svg{transform:scale(1.2);}
 <header class="header"><div class="header-inner"><div class="logo-text">EVM0x<span class="dot">.</span></div><nav class="nav-left"><a href="#projects">Projects</a><a href="#services">Services</a><a href="#about">About</a><a href="#stack">Stack</a></nav><div class="header-right"><a href="https://github.com/EVM0x" target="_blank">GITHUB ↗</a></div></div></header>
 
 <section class="hero">
+<!-- 3D Lanyard badge (React island) -->
+<div id="lanyard-mount" data-lanyard
+     data-position="[0, 0, 30]"
+     data-gravity="[0, -40, 0]"
+     data-fov="20"
+     data-front="photo.jpg"></div>
 <div class="hero-head"><div class="hero-role"><span class="hire-badge"><span class="pulse"></span>AVAILABLE FOR HIRE</span><p class="tagline"><span class="cf">Smart Contract Engineer</span> & Web3 Automation Builder</p></div></div>
 <div class="hero-grid"><span class="tick tl"></span><span class="tick tr"></span><span class="tick bl"></span><span class="tick br"></span>
 <div class="col"><div class="block"><div class="block-title">01 — Who</div><div class="big">Open-source builder at the intersection of <span class="cf">blockchain & software</span>.</div></div><div class="block"><div class="block-title">Focus</div><p class="body">Smart contracts, EVM-compatible networks, Web3 tooling & automation — built, tested and documented in public.</p></div></div>
@@ -309,5 +333,6 @@ window.addEventListener('scroll',()=>{
 // Set active on load
 setTimeout(()=>{window.dispatchEvent(new Event('scroll'));},100);
 </script>
+<script src="lanyard.js" defer></script>
 </body>
 </html>
