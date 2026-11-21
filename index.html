@@ -192,6 +192,11 @@ a{color:inherit;text-decoration:none;}
 .hero-role{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
 .hire-badge{display:inline-flex;align-items:center;gap:8px;border:1px solid #2f6f4f;color:#4ade80;padding:6px 14px;font-size:12px;letter-spacing:.12em;border-radius:2px;}
 .hire-badge .pulse{width:7px;height:7px;border-radius:50%;background:#4ade80;animation:pulse 1.6s infinite;}
+.arena-badge{display:inline-flex;align-items:center;gap:6px;background:#f4f4ef;color:#0a0a0a;border-radius:999px;padding:7px 13px;font-size:11.5px;line-height:1;letter-spacing:.01em;text-decoration:none;white-space:nowrap;transition:transform .15s ease,box-shadow .15s ease;}
+.arena-badge b{font-weight:700;}
+.arena-badge em{font-style:normal;font-weight:500;color:#5f5f58;}
+.arena-badge:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(244,244,239,.16);}
+.arena-badge:focus-visible{outline:2px solid #f4f4ef;outline-offset:3px;}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(74,222,128,.5);}50%{box-shadow:0 0 0 5px rgba(74,222,128,0);}}
 .role-title{font-size:clamp(15px,1.6vw,20px);color:#ccc;}
 
@@ -248,7 +253,7 @@ footer a:hover svg{transform:scale(1.2);}
      data-gravity="[0, -40, 0]"
      data-fov="20"
      data-front="photo.jpg"></div>
-<div class="hero-head"><div class="hero-role"><span class="hire-badge"><span class="pulse"></span>AVAILABLE FOR HIRE</span><p class="tagline"><span class="cf">Smart Contract Engineer</span> & Web3 Automation Builder</p></div></div>
+<div class="hero-head"><div class="hero-role"><span class="hire-badge"><span class="pulse"></span>AVAILABLE FOR HIRE</span><a class="arena-badge" href="https://arena.dev.fun" target="_blank" rel="noopener noreferrer"><b>arena.dev.fun</b> <em>competitor</em></a><p class="tagline"><span class="cf">Smart Contract Engineer</span> & Web3 Automation Builder</p></div></div>
 <div class="hero-grid"><span class="tick tl"></span><span class="tick tr"></span><span class="tick bl"></span><span class="tick br"></span>
 <div class="col"><div class="block"><div class="block-title">01 — Who</div><div class="big">Open-source builder at the intersection of <span class="cf">blockchain & software</span>.</div></div><div class="block"><div class="block-title">Focus</div><p class="body">Smart contracts, EVM-compatible networks, Web3 tooling & automation — built, tested and documented in public.</p></div></div>
 <div class="col col-mid"><div class="block"><div class="block-title">02 — What we ship</div><div class="big">EVM experiments, <span class="cf">smart contracts</span> & open tools.</div></div><div><div class="hero-stat"><span class="k">Ecosystem</span><span class="v">Ethereum / EVM</span></div><div class="hero-stat"><span class="k">Mode</span><span class="v">Open Source</span></div><div class="hero-stat"><span class="k">Focus</span><span class="v">Web3 · Automation</span></div></div></div>
@@ -309,7 +314,7 @@ footer a:hover svg{transform:scale(1.2);}
 
 <footer>
 <div class="f-left"><span>© 2026 EVM0x</span><a href="https://github.com/EVM0x" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://x.com/3vm0x" target="_blank" rel="noopener noreferrer" aria-label="X/Twitter"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a><a href="https://t.me/evm0xstark" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a></div>
-<span>built in public</span>
+<div class="f-left"><a class="arena-badge" href="https://arena.dev.fun" target="_blank" rel="noopener noreferrer"><b>arena.dev.fun</b> <em>competitor</em></a><span>built in public</span></div>
 </footer>
 
 <script>
